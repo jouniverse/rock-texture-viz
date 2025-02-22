@@ -30,23 +30,23 @@ function init() {
 
   var loader = new THREE.TextureLoader();
   sphereMaterial.map = loader.load(
-    "/assets/textures/giants-causeway/giants_causeway_basecolor.jpg"
+    "../assets/textures/giants-causeway/giants_causeway_basecolor.jpg"
   );
   sphereMaterial.bumpMap = loader.load(
-    "/assets/textures/giants-causeway/giants_causeway_normal.jpg"
+    "../assets/textures/giants-causeway/giants_causeway_normal.jpg"
   );
   sphereMaterial.normalMap = sphereMaterial.bumpMap;
   sphereMaterial.roughnessMap = loader.load(
-    "/assets/textures/giants-causeway/giants_causeway_roughness.jpg"
+    "../assets/textures/giants-causeway/giants_causeway_roughness.jpg"
   );
   sphereMaterial.displacementMap = loader.load(
-    "/assets/textures/giants-causeway/giants_causeway_height.jpg"
+    "../assets/textures/giants-causeway/giants_causeway_height.jpg"
   );
   sphereMaterial.metalnessMap = loader.load(
-    "/assets/textures/giants-causeway/giants_causeway_metallic.jpg"
+    "../assets/textures/giants-causeway/giants_causeway_metallic.jpg"
   );
   sphereMaterial.aoMap = loader.load(
-    "/assets/textures/giants-causeway/giants_causeway_ambientocclusion.jpg"
+    "../assets/textures/giants-causeway/giants_causeway_ambientocclusion.jpg"
   );
   // Three.js default : 1
   sphereMaterial.bumpScale = 1;
@@ -299,7 +299,7 @@ function update(renderer, scene, camera, controls) {
 }
 
 function loadCubemap(number) {
-  var path = "/assets/cubemap/cmap-" + number + "/";
+  var path = "../assets/cubemap/cmap-" + number + "/";
   var format = ".png";
   var urls = [
     path + "px" + format,
