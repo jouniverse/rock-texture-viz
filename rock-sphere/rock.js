@@ -299,7 +299,7 @@ function update(renderer, scene, camera, controls) {
 }
 
 function loadCubemap(number) {
-  var path = "/assets/cubemap/cmap-" + number + "/";
+  var path = "../assets/cubemap/cmap-" + number + "/";
   var format = ".png";
   var urls = [
     path + "px" + format,
