@@ -1,3 +1,6 @@
+const isGitHubPages = window.location.hostname.includes("github.io");
+const basePath = isGitHubPages ? "/rock-sphere" : "..";
+
 function init() {
   //  add cubemap to the scene
   var scene = new THREE.Scene();
@@ -30,23 +33,23 @@ function init() {
 
   var loader = new THREE.TextureLoader();
   sphereMaterial.map = loader.load(
-    "../assets/textures/giants-causeway/giants_causeway_basecolor.jpg"
+    `${basePath}/assets/textures/giants-causeway/giants_causeway_basecolor.jpg`
   );
   sphereMaterial.bumpMap = loader.load(
-    "../assets/textures/giants-causeway/giants_causeway_normal.jpg"
+    `${basePath}/assets/textures/giants-causeway/giants_causeway_normal.jpg`
   );
   sphereMaterial.normalMap = sphereMaterial.bumpMap;
   sphereMaterial.roughnessMap = loader.load(
-    "../assets/textures/giants-causeway/giants_causeway_roughness.jpg"
+    `${basePath}/assets/textures/giants-causeway/giants_causeway_roughness.jpg`
   );
   sphereMaterial.displacementMap = loader.load(
-    "../assets/textures/giants-causeway/giants_causeway_height.jpg"
+    `${basePath}/assets/textures/giants-causeway/giants_causeway_height.jpg`
   );
   sphereMaterial.metalnessMap = loader.load(
-    "../assets/textures/giants-causeway/giants_causeway_metallic.jpg"
+    `${basePath}/assets/textures/giants-causeway/giants_causeway_metallic.jpg`
   );
   sphereMaterial.aoMap = loader.load(
-    "../assets/textures/giants-causeway/giants_causeway_ambientocclusion.jpg"
+    `${basePath}/assets/textures/giants-causeway/giants_causeway_ambientocclusion.jpg`
   );
   // Three.js default : 1
   sphereMaterial.bumpScale = 1;
@@ -299,7 +302,7 @@ function update(renderer, scene, camera, controls) {
 }
 
 function loadCubemap(number) {
-  var path = "../assets/cubemap/cmap-" + number + "/";
+  var path = `${basePath}/assets/cubemap/cmap-` + number + "/";
   var format = ".png";
   var urls = [
     path + "px" + format,
