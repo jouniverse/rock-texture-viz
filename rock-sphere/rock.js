@@ -16,7 +16,7 @@ function init() {
   lightLeft.position.z = -1;
   lightLeft.intensity = 0.8;
 
-  lightRight.position.x = -2.3;
+  lightRight.position.x = 1;
   lightRight.position.y = 6;
   lightRight.position.z = -2;
   lightRight.intensity = 1;
