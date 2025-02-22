@@ -8,10 +8,57 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+        background: black;
+      }
+
+      #webgl {
+        display: block;
+      }
+
+      #mobile-block {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        z-index: 1000;
+      }
+
+      #mobile-block div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+      }
+
+      @media screen and (max-width: 1050px) {
+        #webgl {
+          display: none;
+        }
+        #mobile-block {
+          display: block;
+        }
       }
     </style>
   </head>
   <body>
+    <div id="mobile-block">
+      <div>
+        <h1>Desktop Only</h1>
+        <p>
+          This visualization is only available for screen sizes larger than
+          1050px.
+        </p>
+        <p>Please view on a desktop device.</p>
+      </div>
+    </div>
     <div id="webgl"></div>
     <script src="../lib/dat.gui.min.js"></script>
     <script src="../lib/three.js"></script>
